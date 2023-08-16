@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import TestBox from "./components/TestBox/TestBox";
+import TestBox2 from "./components/TestBox2/TestBox2";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>test</h1>
+      
+      <TestBox inputTitleName={"username"} testname={"bbb"} isShow> 
+        <TestBox2 /> 
+      </TestBox>
+
+      <TestBox inputTitleName={"password"} isShow={false}>
+        <TestBox2 /> 
+      </TestBox>
+    </>
   );
 }
 
