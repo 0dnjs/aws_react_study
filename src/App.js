@@ -1,18 +1,18 @@
-import TestBox from "./components/TestBox/TestBox";
-import TestBox2 from "./components/TestBox2/TestBox2";
+import { Route, Routes } from "react-router-dom";
+import InputTest from "./pages/InputTest/InputTest";
+import Main from "./pages/Main/Main";
+import Mypage from "./pages/Mypage/Mypage";
+import CustomerInputTest from "./pages/CustomerInputTest/CustomerInputTest";
 
 function App() {
   return (
     <>
-      <h1>test</h1>
-      
-      <TestBox inputTitleName={"username"} testname={"bbb"} isShow> 
-        <TestBox2 /> 
-      </TestBox>
-
-      <TestBox inputTitleName={"password"} isShow={false}>
-        <TestBox2 /> 
-      </TestBox>
+      <Routes>
+        <Route path="/" element={ <Main /> } />
+        <Route path="/customerinputest" element={ <CustomerInputTest /> } />
+        <Route path="/inputtest" element={ <InputTest /> } />
+        <Route path="/mypage" element={ <Mypage /> } />
+      </Routes>
     </>
   );
 }
